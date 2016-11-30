@@ -1,7 +1,7 @@
 # Change these
 server '37.139.27.223', port: 22, roles: [:web, :app], primary: true
 
-set :repo_url,        'git@github.com:sofianegargouri/simple_todo_list_api.git'
+set :repo_url,        'git@github.com:Lets-Dev/simple_todo_lists_api.git'
 set :application,     'simple_todo_list_api'
 set :user,            'ureaduwrite'
 set :puma_threads,    [4, 16]
