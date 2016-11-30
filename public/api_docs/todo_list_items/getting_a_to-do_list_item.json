@@ -1,0 +1,45 @@
+{
+  "resource": "Todo List Items",
+  "http_method": "GET",
+  "route": "todo_list_items/:id",
+  "description": "Getting a to-do list item",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "todo_list_items/1",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"label\": \"Jabba the Hutt\",\n  \"status\": \"pending\",\n  \"todo_list_id\": 1,\n  \"created_at\": \"2016-11-30T22:47:11.772Z\",\n  \"updated_at\": \"2016-11-30T22:47:11.772Z\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"ff91695cf68d7cac9e94c4b9ff92bd8a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "43fc72d6-2a97-454a-914b-5f475bd6dff7",
+        "X-Runtime": "0.009813",
+        "Content-Length": "149"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000todo_list_items/1\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

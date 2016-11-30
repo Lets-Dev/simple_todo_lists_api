@@ -1,0 +1,57 @@
+{
+  "resource": "Todo Lists",
+  "http_method": "POST",
+  "route": "todo_lists",
+  "description": "Creating a to-do list",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "todo_list",
+      "name": "label",
+      "description": "Title of the list"
+    },
+    {
+      "required": false,
+      "scope": "todo_list",
+      "name": "color",
+      "description": "Color of the list (hexadecimal)"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "todo_lists",
+      "request_body": "{\"todo_list\":{\"label\":\"Bespin\",\"color\":\"#c7a4a6\"}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"label\": \"Bespin\",\n  \"color\": \"#c7a4a6\",\n  \"created_at\": \"2016-11-30T22:47:11.986Z\",\n  \"updated_at\": \"2016-11-30T22:47:11.986Z\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/todo_lists/1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"962d21a525561510f2275736f7dfa86d\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5c32d877-fed7-4e02-8abe-cb5509dd6c1d",
+        "X-Runtime": "0.009609",
+        "Content-Length": "123"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000todo_lists\" -d '{\"todo_list\":{\"label\":\"Bespin\",\"color\":\"#c7a4a6\"}}' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

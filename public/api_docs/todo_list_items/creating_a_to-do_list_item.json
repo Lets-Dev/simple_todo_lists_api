@@ -1,0 +1,63 @@
+{
+  "resource": "Todo List Items",
+  "http_method": "POST",
+  "route": "todo_list_items",
+  "description": "Creating a to-do list item",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "label",
+      "description": "Label of the item"
+    },
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "status",
+      "description": "Status of the item (pending or done)"
+    },
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "todo_list_id",
+      "description": "ID of the parent to-do list"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "todo_list_items",
+      "request_body": "{\"todo_list_item\":{\"label\":\"Mustafar\",\"status\":\"pending\",\"todo_list_id\":1}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"id\": 1,\n  \"label\": \"Mustafar\",\n  \"status\": \"pending\",\n  \"todo_list_id\": 1,\n  \"created_at\": \"2016-11-30T22:47:11.820Z\",\n  \"updated_at\": \"2016-11-30T22:47:11.820Z\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/todo_list_items/1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8f50a96fa910cfed560851cfe8f87e46\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "f8aaa7b2-ef2e-43eb-8cf0-e8e71d430586",
+        "X-Runtime": "0.017039",
+        "Content-Length": "143"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000todo_list_items\" -d '{\"todo_list_item\":{\"label\":\"Mustafar\",\"status\":\"pending\",\"todo_list_id\":1}}' -X POST \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}

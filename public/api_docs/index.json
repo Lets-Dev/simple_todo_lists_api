@@ -1,0 +1,84 @@
+{
+  "resources": [
+    {
+      "name": "Todo List Items",
+      "examples": [
+        {
+          "description": "Creating a to-do list item",
+          "link": "todo_list_items/creating_a_to-do_list_item.json",
+          "groups": "all",
+          "route": "todo_list_items",
+          "method": "post"
+        },
+        {
+          "description": "Deleting a to-do list item",
+          "link": "todo_list_items/deleting_a_to-do_list_item.json",
+          "groups": "all",
+          "route": "todo_list_items/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Editing a to-do list item",
+          "link": "todo_list_items/editing_a_to-do_list_item.json",
+          "groups": "all",
+          "route": "todo_list_items/:id",
+          "method": "put"
+        },
+        {
+          "description": "Getting a to-do list item",
+          "link": "todo_list_items/getting_a_to-do_list_item.json",
+          "groups": "all",
+          "route": "todo_list_items/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing to-do list items",
+          "link": "todo_list_items/listing_to-do_list_items.json",
+          "groups": "all",
+          "route": "todo_list_items",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Todo Lists",
+      "examples": [
+        {
+          "description": "Creating a to-do list",
+          "link": "todo_lists/creating_a_to-do_list.json",
+          "groups": "all",
+          "route": "todo_lists",
+          "method": "post"
+        },
+        {
+          "description": "Deleting a to-do list",
+          "link": "todo_lists/deleting_a_to-do_list.json",
+          "groups": "all",
+          "route": "todo_lists/:id",
+          "method": "delete"
+        },
+        {
+          "description": "Editing a to-do list",
+          "link": "todo_lists/editing_a_to-do_list.json",
+          "groups": "all",
+          "route": "todo_lists/:id",
+          "method": "put"
+        },
+        {
+          "description": "Getting a to-do list",
+          "link": "todo_lists/getting_a_to-do_list.json",
+          "groups": "all",
+          "route": "todo_lists/:id",
+          "method": "get"
+        },
+        {
+          "description": "Listing to-do lists",
+          "link": "todo_lists/listing_to-do_lists.json",
+          "groups": "all",
+          "route": "todo_lists",
+          "method": "get"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "resource": "Todo List Items",
+  "http_method": "PUT",
+  "route": "todo_list_items/:id",
+  "description": "Editing a to-do list item",
+  "explanation": null,
+  "parameters": [
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "label",
+      "description": "Label of the item"
+    },
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "status",
+      "description": "Status of the item (pending or done)"
+    },
+    {
+      "required": true,
+      "scope": "todo_list_item",
+      "name": "todo_list_id",
+      "description": "ID of the parent to-do list"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "PUT",
+      "request_path": "todo_list_items/1",
+      "request_body": "{\"todo_list_item\":{\"label\":\"Mustafar\",\"status\":\"done\",\"todo_list_id\":2}}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"id\": 1,\n  \"label\": \"Mustafar\",\n  \"status\": \"done\",\n  \"todo_list_id\": 2,\n  \"created_at\": \"2016-11-30T22:47:11.844Z\",\n  \"updated_at\": \"2016-11-30T22:47:11.851Z\"\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"bf75f9274367b82b67ff00e59150fbac\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a381986e-9007-4f92-9397-78b03c9b7953",
+        "X-Runtime": "0.005505",
+        "Content-Length": "140"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000todo_list_items/1\" -d '{\"todo_list_item\":{\"label\":\"Mustafar\",\"status\":\"done\",\"todo_list_id\":2}}' -X PUT \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Host: example.org\" \\\n\t-H \"Cookie: \""
+    }
+  ]
+}
